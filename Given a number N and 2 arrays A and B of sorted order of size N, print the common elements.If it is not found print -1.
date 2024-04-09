@@ -1,0 +1,25 @@
+Given a number N and 2 arrays A and B of sorted order of size N, print the common elements.If it is not found print -1.
+Input Size : 1 <= N <= 100000
+Sample Testcase :
+INPUT
+5
+1 1 1 1 1
+1 2 3 4 5
+OUTPUT
+1
+
+CODE:
+
+n = int(input())
+l1 = list(map(int, input().split()))
+l2 = list(map(int, input().split()))
+final = []
+
+for i in range(n):
+    if l1[i] in l2 and l1[i] not in final:
+        final.append(l1[i])
+
+if len(final) == 0:
+    print("-1")
+else:
+    print(*final)
