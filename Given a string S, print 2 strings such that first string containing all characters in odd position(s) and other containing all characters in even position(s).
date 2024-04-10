@@ -1,0 +1,22 @@
+Given a string S, print 2 strings such that first string containing all characters in odd position(s) and other containing all characters in even position(s).
+Sample Testcase :
+INPUT
+XCODE
+OUTPUT
+XOE CD
+
+CODE:
+
+s = input()
+odd = ''
+even = ''
+
+# Separate characters into odd and even indices
+for i in range(len(s)):
+    if i % 2 == 0:
+        even += s[i]
+    else:
+        odd += s[i]
+
+# Print the result
+print(f'{even} {odd}')
